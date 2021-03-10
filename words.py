@@ -1,0 +1,1 @@
+palabras = ['hola','perro','gato','conejo','lapiz']

@@ -10,7 +10,8 @@ def get_valid_palabra(palabras):
     
     return palabra
 
-hidden_palabra = set()
-for letter in get_valid_palabra(palabras):
-    hidden_word.add('-')
+mi_palabra = get_valid_palabra(palabras)
+espacios_vacios = ' _ ' * len(mi_palabra)
+print(espacios_vacios)
+
     

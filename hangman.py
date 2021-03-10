@@ -14,4 +14,3 @@ mi_palabra = get_valid_palabra(palabras)
 espacios_vacios = ' _ ' * len(mi_palabra)
 print(espacios_vacios)
 
-    

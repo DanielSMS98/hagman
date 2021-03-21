@@ -10,3 +10,6 @@
 4. Descartar en caso de que contenga '-' o ' '
 
 Nota: Construir algoritmo con pasos, dividan el problema en subproblemas y resuelvan.
+
+Segunda parte:
+Uso de colorama y de entorno virtual

@@ -11,5 +11,18 @@
 
 Nota: Construir algoritmo con pasos, dividan el problema en subproblemas y resuelvan.
 
-Segunda parte:
+## Segunda parte:
+
 Uso de colorama y de entorno virtual
+
+## Tercera parte:
+
+Creacion del procedimiento de la palabra.
+
+1. Recibes la palaba selecionada.
+2. La separas.
+3. Inicias el juego, preguntadole una letra.
+4. Validas palabra es correcta, incorrecta o repetida.
+5.  Dar mesaje de resultados.
+
+## Cuarta parte:

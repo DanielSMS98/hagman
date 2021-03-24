@@ -11,18 +11,17 @@ def get_valid_palabra(palabras):
     while '-' in palabra or ' ' in palabra:
         palabra = random.choice(palabras)
     
-    return palabra
+    return palabra.upper()
 
 def hangman():
     mi_palabra = get_valid_palabra(palabras)
-    palabra_separada = set(mi_palabra.upper())
+    palabra_separada = list(mi_palabra)
     alphabet = set(string.ascii_uppercase)
     used_letter = set()
     lives = 6
 
     while len(palabra_separada) > 0 and lives > 0:
-        print(palabra_separada)
-        print(lives)
+        print("Intentos",lives)
         user_letter = input('Introduce una letra: ').upper()
         if user_letter in alphabet - used_letter:
             used_letter.add(user_letter)
@@ -39,13 +38,6 @@ def hangman():
     if(lives > 0):
         print("Ganaste")
     else:
-        print("Perdistes")
-
+        print(f"Tu palabra era {mi_palabra}\n","Perdistes")
 
 hangman()
-
-
-#mi_palabra = get_valid_palabra(palabras)
-#espacios_vacios = mi_palabra+'\n',len(mi_palabra)
-#print("-"*len(mi_palabra))
-#print( Fore.RED +"-"*len(mi_palabra))

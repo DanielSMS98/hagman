@@ -23,6 +23,13 @@ Creacion del procedimiento de la palabra.
 2. La separas.
 3. Inicias el juego, preguntadole una letra.
 4. Validas palabra es correcta, incorrecta o repetida.
-5.  Dar mesaje de resultados.
+5. Dar mesaje de resultados.
 
 ## Cuarta parte:
+
+Creacion de un dibujo en terminar para jugar
+
+1. Hacer un nuevo documento llamado "drawing"
+2. Realizar una variable que contega el dibujo.
+3. Importar variable al programa principal
+4. Implementarla en los intentos. 

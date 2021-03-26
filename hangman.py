@@ -44,7 +44,9 @@ def hangman():
 
     while len(palabra_separada) > 0 and lives > 0:
         print(hangman_drawing[drawing])
-        print("Intentos",lives)
+        print("Intentos: ",lives)
+        word_list = [letter if letter in used_letter else '-' for letter in mi_palabra]
+        print('Palabra: ',' '.join(word_list))
         user_letter = input('Introduce una letra: ').upper()
         if user_letter in alphabet - used_letter:
             used_letter.add(user_letter)

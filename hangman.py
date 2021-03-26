@@ -5,8 +5,26 @@ import string
 from drawing import hangman_drawing
 #init()
 
-print("Bienvenido al juego del ahorcado")
 
+#Metodo de iniciacion del progrma indica el inicio y pregunta si quieres jugar
+def main():
+    cont = 0
+    while(cont == 0 ):
+        print("Bienvenido al juego del ahorcado")
+        cont = int(input("¿Deseas jugar?\n[1]Si\n[2]No\n"))        
+        if(cont == 1):
+            hangman()
+            cont = 0
+        elif(cont == 2):
+            print("\nAdios")
+            exit()
+        else:
+            print("\nIntroduccion erronea, vuelve a introducirlo\n")
+            cont = 0
+            
+
+#Metod para selecionar la palabra en lo cual la sacara de la lista
+#del documneto "words"
 def get_valid_palabra(palabras):
     palabra = random.choice(palabras)
     while '-' in palabra or ' ' in palabra:
@@ -14,6 +32,8 @@ def get_valid_palabra(palabras):
     
     return palabra.upper()
 
+
+#Juego del ahorcado
 def hangman():
     mi_palabra = get_valid_palabra(palabras)
     palabra_separada = list(mi_palabra)
@@ -38,8 +58,9 @@ def hangman():
         else:
             print("Caracter invalido")
     if(lives > 0):
-        print("Ganaste")
+        print(f"\nTu palabra era {mi_palabra}\nGanaste\n")
     else:
-        print(f"Tu palabra era {mi_palabra}\n","Perdistes")
+        print(f"\nTu palabra era {mi_palabra}\nPerdistes\n")
 
-hangman()
+
+main()

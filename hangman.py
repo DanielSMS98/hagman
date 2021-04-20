@@ -36,7 +36,7 @@ def get_valid_palabra(palabras):
 #Juego del ahorcado
 def hangman():
     mi_palabra = get_valid_palabra(palabras)
-    palabra_separada = list(mi_palabra)
+    palabra_separada = set(mi_palabra)
     alphabet = set(string.ascii_uppercase)
     used_letter = set()
     drawing = 0
@@ -51,7 +51,7 @@ def hangman():
         if user_letter in alphabet - used_letter:
             used_letter.add(user_letter)
             if user_letter in palabra_separada:        
-                palabra_separada.remove(user_letter)
+                palabra_separada.discard(user_letter)
             else:
                 lives = lives - 1
                 drawing = drawing + 1

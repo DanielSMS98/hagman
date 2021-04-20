@@ -48,13 +48,17 @@ def hangman():
         word_list = [letter if letter in used_letter else '-' for letter in mi_palabra]
         print('Palabra: ',' '.join(word_list))
         user_letter = input('Introduce una letra: ').upper()
+        
         if user_letter in alphabet - used_letter:
             used_letter.add(user_letter)
+            
             if user_letter in palabra_separada:        
                 palabra_separada.discard(user_letter)
+            
             else:
                 lives = lives - 1
                 drawing = drawing + 1
+        
         elif user_letter in used_letter:
             print("Repetiste una letra")
         else:
